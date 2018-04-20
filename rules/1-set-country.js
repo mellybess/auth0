@@ -2,7 +2,8 @@ function (user, context, callback) {
   if (context.request.geoip) {
     context.idToken['https://example.com/country'] = context.request.geoip.country_name;
     context.idToken['https://example.com/timezone'] = context.request.geoip.time_zone;
-  }
+    context.idToken['https://example.com/country_code3'] = context.request.geoip.country_code3; 
+ }
 
    // Example geoip object:
    // "geoip": {
