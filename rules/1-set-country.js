@@ -1,8 +1,8 @@
 function (user, context, callback) {
   if (context.request.geoip) {
-    context.idToken['https://example.com/country'] = context.request.geoip.country_name;
-    context.idToken['https://example.com/timezone'] = context.request.geoip.time_zone;
-    context.idToken['https://example.com/country_code'] = context.request.geoip.country_code; 
+    user.country = context.request.geoip.country_name;
+    user.timezone = context.request.geoip.time_zone;
+    user.country_code = context.request.geoip.country_code.toLowerCase(); 
  }
 
    // Example geoip object:
