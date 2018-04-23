@@ -14,7 +14,7 @@ function (user, context, callback) {
         allowRememberBrowser: true
       };
     // }
-  //}
+  }
 
   callback(null, user, context);
 }
