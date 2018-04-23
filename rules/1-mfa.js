@@ -1,6 +1,6 @@
 function (user, context, callback) {
 
-  var CLIENTS_WITH_MFA = ['nc4H4HwqC9jfuvxpUHbW1Lqx6I128XYY'];
+  var CLIENTS_WITH_MFA = [configuration.node-client-id];
   // run only for the specified clients
    if (CLIENTS_WITH_MFA.indexOf(context.clientID) !== -1) {
     // uncomment the following if clause in case you want to request a second factor only from user's that have user_metadata.use_mfa === true
